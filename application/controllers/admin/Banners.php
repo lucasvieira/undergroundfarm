@@ -24,6 +24,24 @@ class Banners extends Admin_Controller
     $this->render('admin/banners/list_banners_view');
   }
 
+  public function create()
+  {
+    $this->data['page_title'] = 'Novo Banners';
+    $this->render('admin/banners/create_banners_view');
+  }
+
+  public function do_create(){
+    //recebe todos os valores do form, inclusive o de imagem e processar.
+    //método do Banners_model que grava o novo banner.
+  }
+
+  public function edit($banner_id == null)
+  {
+    $banner_id = $this->input->post('id') ? $this->input->post('id') : $banner_id;
+    $this->data['page_title'] = 'Editar Banners';
+    $this->render('admin/banners/create_banners_view');
+  }
+
   public function delete($banner_id = NULL)
   {
     if(is_null($banner_id))
@@ -43,8 +61,14 @@ class Banners extends Admin_Controller
     redirect('admin/users','refresh');
   }
 
+  public function edit()
+  {
+
+  }
+
+/*
   public function create()
-  {/*
+  {
     $this->data['page_title'] = 'Create user';
     $this->load->library('form_validation');
     $this->form_validation->set_rules('first_name','First name','trim');
@@ -79,11 +103,14 @@ class Banners extends Admin_Controller
       $this->ion_auth->register($username, $password, $email, $additional_data, $group_ids);
       $this->session->set_flashdata('message',$this->ion_auth->messages());
       redirect('admin/users','refresh');
-    }*/
+    }
   }
+  */
 
+  /*
   public function edit()
-  {/*
+  {
+
     $user_id = $this->input->post('user_id') ? $this->input->post('user_id') : $user_id;
     $this->data['page_title'] = 'Edit user';
     $this->load->library('form_validation');
@@ -150,7 +177,7 @@ class Banners extends Admin_Controller
 
       $this->session->set_flashdata('message',$this->ion_auth->messages());
       redirect('admin/users','refresh');
-    }*/
+    }
   }
-
+  */
 }

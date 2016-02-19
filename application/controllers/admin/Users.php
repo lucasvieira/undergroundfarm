@@ -60,7 +60,7 @@ class Users extends Admin_Controller
     }
   }
 
-  public function edit()
+  public function edit($user_id = null)
   {
     $user_id = $this->input->post('user_id') ? $this->input->post('user_id') : $user_id;
     $this->data['page_title'] = 'Edit user';
