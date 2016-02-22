@@ -17,7 +17,7 @@
       {
         echo '<tr>';
         echo '<td>'.$banner['id'].'</td><td>'.$banner['title'].'</td><td>'.$banner['img'].'</td><td>'.$banner['img_mobile'].'</td><td>';
-        echo anchor('admin/banners/edit/'.$banner['id'],'<span class="glyphicon glyphicon-pencil"></span>').' '.anchor('admin/users/delete/'.$banner['id'],'<span class="glyphicon glyphicon-remove"></span>');
+        echo anchor('admin/banners/edit/'.$banner['id'],'<span class="glyphicon glyphicon-pencil"></span>').' '.anchor('admin/banners/delete/'.$banner['id'],'<span class="glyphicon glyphicon-remove"></span>');
         echo '</td>';
         echo '</tr>';
       }

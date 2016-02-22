@@ -6,6 +6,10 @@ class Banners_model extends CI_Model {
     $this->load->database();
   }
 
+  public function create_banner($data){
+    $this->db->insert('banners', $data);
+  }
+
   public function get_banners($id = FALSE)
   {
     if ($id === FALSE)
@@ -19,7 +23,7 @@ class Banners_model extends CI_Model {
   }
 
   public function delete_banner($id = FALSE){
-    $this->db->delete($this->tables['banners'], array('id' => $id));
+    $this->db->delete(banners, array('id' => $id));
     if ($this->db->affected_rows() == 0)
     {
       return FALSE;
