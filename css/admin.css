@@ -1,1 +1,7 @@
 .navbar-inverse{width: 100%; position: inherit;}
+.mini_img,
+.mini_img_mobile{
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 2px;
+}

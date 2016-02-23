@@ -10,6 +10,12 @@ class Banners_model extends CI_Model {
     $this->db->insert('banners', $data);
   }
 
+  public function edit_banner($data, $id){
+    $this->db->where('id', $id);
+    $this->db->update('banners', $data);
+  }
+
+
   public function get_banners($id = FALSE)
   {
     if ($id === FALSE)
